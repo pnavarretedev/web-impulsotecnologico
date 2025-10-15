@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/react/Navbar.jsx';
+import AboutSection from '../components/react/AboutSection.jsx';
+import Footer from '../components/react/Footer.jsx';
+---
+
+<Layout title="Sobre Mí - Pablo Navarrete | Impulso Tecnológico">
+  <Navbar client:load />
+  <AboutSection client:load />
+  <Footer client:load />
+</Layout>

@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/* Prose styles for markdown content */
+  .prose h1 {
+    @apply text-3xl font-bold text-slate-900 mt-8 mb-4;
+  }
+  
+  .prose h2 {
+    @apply text-2xl font-bold text-slate-900 mt-8 mb-4;
+  }
+  
+  .prose h3 {
+    @apply text-xl font-bold text-slate-900 mt-6 mb-3;
+  }
+  
+  .prose p {
+    @apply text-slate-600 leading-relaxed mb-4;
+  }
+  
+  .prose a {
+    @apply text-cyan-600 hover:text-blue-600 underline;
+  }
+  
+  .prose ul, .prose ol {
+    @apply my-4 ml-6;
+  }
+  
+  .prose li {
+    @apply text-slate-600 mb-2;
+  }
+  
+  .prose strong {
+    @apply font-bold text-slate-900;
+  }
+  
+  .prose em {
+    @apply italic text-slate-700;
+  }
+  
+  .prose code {
+    @apply bg-slate-100 px-2 py-1 rounded text-sm text-slate-800;
+  }
+  
+  .prose blockquote {
+    @apply border-l-4 border-cyan-500 pl-4 italic text-slate-600 my-6;
+  }

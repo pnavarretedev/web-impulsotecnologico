@@ -1,0 +1,72 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/react/Navbar.jsx';
+import Footer from '../../components/react/Footer.jsx';
+import BlogSection from '../../components/react/BlogSection.jsx';
+import { getCollection } from 'astro:content';
+
+// Get all blog posts
+const allPosts = await getCollection('blog', ({ data }) => {
+  return data.draft !== true;
+});
+
+// Sort by date (newest first)
+const sortedPosts = allPosts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+// Get all unique tags
+const allTags = [...new Set(sortedPosts.flatMap(post => post.data.tags))].sort();
+
+---
+
+<Layout title="Blog - Impulso Tecnológico">
+  <Navbar client:load />
+  
+  <main class="min-h-screen bg-slate-50">
+    <!-- Hero Section -->
+    <section class="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-slate-50 via-cyan-50/30 to-blue-50/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <div class="inline-flex items-center space-x-2 px-4 py-2 bg-cyan-100 text-cyan-700 rounded-full text-sm font-medium mb-6">
+            <span>Blog</span>
+          </div>
+          <h1 class="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+            Insights sobre 
+            <span class="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
+              Transformación Digital
+            </span>
+          </h1>
+          <p class="text-lg text-slate-600 leading-relaxed">
+            Descubre estrategias, tendencias y mejores prácticas para impulsar la innovación en tu empresa
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Blog con Filtros (TODO EN UNO) -->
+    <BlogSection client:load posts={sortedPosts} tags={allTags} />
+  </main>
+
+  <Footer client:load />
+</Layout>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+</style>
