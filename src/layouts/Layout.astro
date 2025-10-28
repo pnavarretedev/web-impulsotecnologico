@@ -22,7 +22,7 @@ const { title } = Astro.props;
     <!-- Google Analytics 4 -->
     {GA_ID && (
       <>
-        <script is:inline src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
         <script is:inline define:vars={{ GA_ID }}>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
