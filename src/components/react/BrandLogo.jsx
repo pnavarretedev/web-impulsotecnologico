@@ -2,13 +2,12 @@ import React from "react";
 
 export default function BrandLogo({ variant = "navbar", link = "/", className = "" }) {
   const logoMap = {
-    navbar: "/logo-impulso/logo-dispo-b.png",
-    "navbar-mobile": "/logo-impulso/logo.png",
-    footer: "/logo-impulso/logo-dispo-a.png",
+    navbar: "/logo-impulso/logo-dispo-b.png",        // Desktop
+    "navbar-mobile": "/logo-impulso/logo.png",       // Mobile (isotipo)
+    footer: "/logo-impulso/logo-dispo-a.png",        // Footer stacked
   };
 
-  // 🚀 Ruta compatible con Astro/Vite/React
-  const src = new URL(logoMap[variant], import.meta.url).href;
+  const src = logoMap[variant];
 
   const image = (
     <img
@@ -18,11 +17,15 @@ export default function BrandLogo({ variant = "navbar", link = "/", className = 
     />
   );
 
-  if (!link) return image;
+  // con enlace
+  if (link) {
+    return (
+      <a href={link} className="flex items-center hover:opacity-90 transition-opacity">
+        {image}
+      </a>
+    );
+  }
 
-  return (
-    <a href={link} className="hover:opacity-90 transition-opacity flex items-center">
-      {image}
-    </a>
-  );
+  // sin enlace
+  return image;
 }
