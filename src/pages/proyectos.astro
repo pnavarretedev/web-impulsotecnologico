@@ -8,23 +8,23 @@ import ProjectsSection from "../components/react/ProjectsSection.jsx";
 // Projects data
 const projects = [
   {
-    title: "Sistema de Autenticación Empresarial",
+    title: "Migración a Office 365 Empresa",
     description:
-      "API REST completa con gestión de usuarios, roles y permisos. Implementación de JWT, refresh tokens y seguridad enterprise-level.",
-    image: "images/projects/auth-system.jpg",
-    tech: ["Astro", "Express", "SQLite", "JWT", "React"],
+      "Implementación completa de licenciamiento y migración a Microsoft 365 para empresas. Incluye diagnóstico inicial, configuración de cuentas, correo corporativo, y capacitación básica para equipos. Ideal para organizaciones que buscan seguridad, productividad y colaboración en la nube.",
+    image: "images/projects/migracion-365.jpg",
+    tech: ["Office 365", "Sharepoint", "Exchange", "EntraID", "Teams"],
     status: "completed",
     link: "",
     github: "",
   },
   {
-    title: "Dashboard de Gestión",
+    title: "API de consulta a SII",
     description:
-      "Panel administrativo para gestión de usuarios, formularios de contacto y análisis de métricas en tiempo real.",
-    image: "images/projects/dashboard.jpg",
-    tech: ["React", "Tailwind", "Next.js", "TypeScript"],
+      "Desarrollo de una API que automatiza la consulta de datos públicos en el Servicio de Impuestos Internos (SII), permitiendo obtener información clave de contribuyentes como razón social, RUT, giros y estado tributario. Ideal para plataformas de facturación, validación de clientes o inteligencia comercial.",
+    image: "images/projects/api-sii.jpg",
+    tech: ["Node.js", "API Rest", "TypeScript", "SII","Scraping"],
     status: "completed",
-    link: "",
+    link: "https://sii-src.impulsotecnologico.cl/",
     github: "",
   },
   {
@@ -33,32 +33,32 @@ const projects = [
       "Sistema de tickets basado en mejores prácticas ITIL. Gestión de incidentes, problemas y cambios con SLA automatizado.",
     image: "images/projects/itil-desk.jpg",
     tech: ["Next.js", "TypeScript", "MongoDB", "Socket.io"],
-    status: "completed",
-    link: "",
-    github: "",
-  },
-  {
-    title: "Sistema de Cotizaciones",
-    description:
-      "Plataforma para crear, gestionar y hacer seguimiento de cotizaciones. Generación automática de PDFs y envío por email.",
-    image: "images/projects/quotes.jpg",
-    tech: ["Next.js", "React", "react-pdf", "TypeScript"],
     status: "in-progress",
     link: "",
     github: "",
   },
   {
-    title: "Base de Conocimientos",
+    title: "Sistema de Cotizaciones Inteligente",
     description:
-      "Knowledge base interna con búsqueda avanzada, categorización y gestión de problemas comunes. Wiki colaborativa para el equipo.",
-    image: "images/projects/knowledge-base.jpg",
-    tech: ["Astro", "Tailwind", "MongoDB", "Vercel"],
+      "Plataforma desarrollada en Next.js para la gestión eficiente de cotizaciones. Permite crear, editar y enviar propuestas comerciales, generar archivos PDF personalizados y compartirlos mediante enlaces únicos con código QR. El cliente puede aceptar o rechazar la cotización directamente desde su dispositivo, agilizando el proceso de cierre y mejorando la experiencia de atención.",
+    image: "images/projects/cotizaciones.jpg",
+    tech: ["Next.js", "React", "react-pdf", "QRCode", "SII", "Banco Central"],
+    status: "completed",
+    link: "https://cotizaciones.impulsotecnologico.cl/",
+    github: "",
+  },
+  {
+    title: "Landing Page optimizada con Astro y SEO",
+    description:
+      "Diseño y desarrollo de una landing page rápida, moderna y optimizada para buscadores, utilizando Astro como framework principal. La estructura está pensada para mejorar el posicionamiento orgánico (SEO), con carga eficiente, etiquetas semánticas, metadatos personalizados y contenido estratégico. Ideal para campañas, productos o servicios que requieren alto impacto y visibilidad digital.",
+    image: "images/projects/landing.jpg",
+    tech: ["Astro", "Tailwind", "SEO", "React"],
     status: "completed",
     link: "",
     github: "",
   },
   {
-    title: "Chat Bot",
+    title: "Asistente Virtual con IA",
     description:
       "Asistente virtual inteligente con procesamiento de lenguaje natural. Respuestas instantáneas 24/7, escalamiento automático a agentes humanos y aprendizaje continuo de interacciones.",
     image: "images/projects/client-portal.jpg",
