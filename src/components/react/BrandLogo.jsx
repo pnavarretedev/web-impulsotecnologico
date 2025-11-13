@@ -11,10 +11,11 @@ export default function BrandLogo({
     footer: "/logo-impulso/logo-dispo-a.png",
   };
 
+  // TAMAÑOS DEFINITIVOS
   const sizeMap = {
-    navbar: "h-8",
-    "navbar-mobile": "h-8",
-    footer: "h-12",
+    navbar: "h-10",           // antes h-8 → AHORA TEXTO SE VE BIEN
+    "navbar-mobile": "h-10",  // isotipo mantiene proporción
+    footer: "h-14",           // más grande, corporativo
   };
 
   const src = logoMap[variant];
