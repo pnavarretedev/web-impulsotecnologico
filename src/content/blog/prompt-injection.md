@@ -26,7 +26,7 @@ Este tipo de ataque puede colarse en:
 
 - **Webs dinámicas:** Hoy en día, muchas páginas generan contenido personalizado y actualizan sus instrucciones en tiempo real—un campo fértil para ataques indirectos.
 - **Integraciones y plugins:** Los navegadores modernos permiten conectar herramientas que ejecutan órdenes—una IA manipulada por prompt injection podría hacer compras, transferencias o acceder a tu historial de navegación.
-- **Casos reales:** Organizaciones líderes como OWASP y NIST han reportado incidentes donde asistentes web con IA fueron vulnerados, permitiendo robo de credenciales, filtración de información o ejecución de spam masivo [web:11][web:12].
+- **Casos reales:** Organizaciones líderes como OWASP y NIST han reportado incidentes donde asistentes web con IA fueron vulnerados, permitiendo robo de credenciales, filtración de información o ejecución de spam masivo.
 
 ## Claves para proteger tu navegador y tus datos
 
@@ -37,14 +37,10 @@ Este tipo de ataque puede colarse en:
 
 ## El futuro de los navegadores inteligentes
 
-A medida que más empresas integran IA en navegadores y asistentes web, los ataques de prompt injection se volverán más sofisticados y frecuentes. Grandes proveedores como OpenAI y los marcos de OWASP recomiendan auditar continuamente la arquitectura y entrenar tanto desarrolladores como usuarios para detectar estos vectores de riesgo [web:11][web:14].
+A medida que más empresas integran IA en navegadores y asistentes web, los ataques de prompt injection se volverán más sofisticados y frecuentes. Grandes proveedores como OpenAI y los marcos de OWASP recomiendan auditar continuamente la arquitectura y entrenar tanto desarrolladores como usuarios para detectar estos vectores de riesgo.
 
----
 
-¿Quieres saber si tu navegador con IA es realmente seguro?  
-Como consultor TI, estoy disponible para ayudarte a evaluar y fortalecer tus sistemas.  
-Si tienes dudas, ¡contáctame!
-
----
-
-**Fuentes seleccionadas:** OWASP GenAI Security Project [web:11], NIST AI Security Guidelines [web:12], OpenAI Security Blog [web:14], ESET en español [web:2], casos citados en Trend Micro y Promon [web:6][web:5].
+>[!NOTE]
+>¿Quieres saber si tu navegador con IA es realmente seguro?  
+>Como consultor TI, estoy disponible para ayudarte a evaluar y fortalecer tus sistemas.  
+>Si tienes dudas, ¡contáctame!
