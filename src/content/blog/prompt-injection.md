@@ -3,7 +3,7 @@ title: "Prompt Injection y Exploradores Web con IA: El Nuevo Riesgo Invisible"
 description: "¿Sabías que tu navegador web con IA puede ser la puerta de entrada a ataques avanzados? Descubre cómo protegerte hoy mismo."
 pubDate: 2025-11-17
 author: "Pablo Navarrete"
-tags: ["ciberseguridad", "websecurity", "IA", "promptinjection", "OWASP"]
+tags: ["CiberSeguridad", "WebSecurity", "IA", "PromptInjection", "OWASP"]
 image: "/images/blog/prompt-injection.jpg"
 ---
 
@@ -40,7 +40,7 @@ Este tipo de ataque puede colarse en:
 A medida que más empresas integran IA en navegadores y asistentes web, los ataques de prompt injection se volverán más sofisticados y frecuentes. Grandes proveedores como OpenAI y los marcos de OWASP recomiendan auditar continuamente la arquitectura y entrenar tanto desarrolladores como usuarios para detectar estos vectores de riesgo.
 
 
->[!NOTE]
+
 >¿Quieres saber si tu navegador con IA es realmente seguro?  
 >Como consultor TI, estoy disponible para ayudarte a evaluar y fortalecer tus sistemas.  
 >Si tienes dudas, ¡contáctame!
