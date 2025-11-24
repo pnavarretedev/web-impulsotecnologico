@@ -181,7 +181,7 @@ export default function ImpulsoTechHome() {
     { name: "Agrogesttion SPA", logo: "/images/logo-empresas/agrogesttion.jpg" },
     { name: "Chillerservie LTDA", logo: "/images/logo-empresas/chillerservice.jpg" },
     { name: "CZ Consultora LTDA", logo: "/images/logo-empresas/czconsultora.jpg" },
-    { name: "ISAP SPA", logo: "/images/logo-empresas/isap.jpg" },
+    { name: "Contructora ICD SPA", logo: "/images/logo-empresas/icd.png" },
   ];
 
   return (
