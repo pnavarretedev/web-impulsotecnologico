@@ -24,8 +24,8 @@ export default function Navbar() {
 
           {/* LINKS DESKTOP */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-slate-700 hover:text-cyan-600 font-medium transition-colors">Home</a>
-            <a href="/about" className="text-slate-700 hover:text-cyan-600 font-medium transition-colors">About</a>
+            <a href="/" className="text-slate-700 hover:text-cyan-600 font-medium transition-colors">Inicio</a>
+            <a href="/about" className="text-slate-700 hover:text-cyan-600 font-medium transition-colors">Nosotros</a>
             <a href="/proyectos" className="text-slate-700 hover:text-cyan-600 font-medium transition-colors">Proyectos</a>
             <a href="/blog" className="text-slate-700 hover:text-cyan-600 font-medium transition-colors">Blog</a>
           </div>
