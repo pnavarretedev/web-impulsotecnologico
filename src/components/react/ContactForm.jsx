@@ -10,6 +10,7 @@ export default function ContactForm() {
   
   const [status, setStatus] = useState('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const [fieldErrors, setFieldErrors] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,12 +18,53 @@ export default function ContactForm() {
       ...prev,
       [name]: value
     }));
+    
+    // Limpiar error del campo cuando el usuario empiece a escribir
+    if (fieldErrors[name]) {
+      setFieldErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
+
+  const validateForm = () => {
+    const errors = {};
+    
+    if (!formData.name.trim()) {
+      errors.name = 'El nombre es obligatorio';
+    } else if (formData.name.trim().length < 2) {
+      errors.name = 'El nombre debe tener al menos 2 caracteres';
+    }
+    
+    if (!formData.email.trim()) {
+      errors.email = 'El correo electrónico es obligatorio';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      errors.email = 'Ingresa un correo electrónico válido';
+    }
+    
+    if (!formData.message.trim()) {
+      errors.message = 'El mensaje es obligatorio';
+    } else if (formData.message.trim().length < 10) {
+      errors.message = 'El mensaje debe tener al menos 10 caracteres';
+    }
+    
+    return errors;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('loading');
     setErrorMessage('');
+    setFieldErrors({});
+
+    // Validación del frontend
+    const errors = validateForm();
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
+      setStatus('idle');
+      return;
+    }
 
     try {
       const response = await fetch('https://form.impulsotecnologico.cl/api/contact-messages', {
@@ -33,8 +75,21 @@ export default function ContactForm() {
         body: JSON.stringify(formData)
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        throw new Error('Error al enviar el mensaje. Por favor, intenta nuevamente.');
+        // Manejar errores de validación del backend
+        if (data.errors && Array.isArray(data.errors)) {
+          const backendErrors = {};
+          data.errors.forEach(error => {
+            backendErrors[error.field] = error.message;
+          });
+          setFieldErrors(backendErrors);
+          setStatus('idle');
+        } else {
+          throw new Error(data.message || 'Error al enviar el mensaje. Por favor, intenta nuevamente.');
+        }
+        return;
       }
 
       setStatus('success');
@@ -51,7 +106,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="max-w-2xl mx-auto p-6">
       <div className="space-y-6">
         <div className="group">
           <label className="block text-sm font-medium text-slate-700 mb-2">
@@ -67,11 +122,19 @@ export default function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="block w-full pl-12 pr-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none hover:border-cyan-300"
+              className={`block w-full pl-12 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none hover:border-cyan-300 ${
+                fieldErrors.name ? 'border-red-300 bg-red-50' : 'border-slate-200'
+              }`}
               placeholder="Tu nombre"
               disabled={status === 'loading'}
             />
           </div>
+          {fieldErrors.name && (
+            <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+              <AlertCircle className="h-4 w-4" />
+              {fieldErrors.name}
+            </p>
+          )}
         </div>
 
         <div className="group">
@@ -88,11 +151,19 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="block w-full pl-12 pr-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none hover:border-cyan-300"
+              className={`block w-full pl-12 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none hover:border-cyan-300 ${
+                fieldErrors.email ? 'border-red-300 bg-red-50' : 'border-slate-200'
+              }`}
               placeholder="tu@email.com"
               disabled={status === 'loading'}
             />
           </div>
+          {fieldErrors.email && (
+            <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+              <AlertCircle className="h-4 w-4" />
+              {fieldErrors.email}
+            </p>
+          )}
         </div>
 
         <div className="group">
@@ -109,11 +180,19 @@ export default function ContactForm() {
               onChange={handleChange}
               required
               rows={6}
-              className="block w-full pl-12 pr-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none hover:border-cyan-300 resize-none"
+              className={`block w-full pl-12 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none hover:border-cyan-300 resize-none ${
+                fieldErrors.message ? 'border-red-300 bg-red-50' : 'border-slate-200'
+              }`}
               placeholder="Cuéntanos sobre tu proyecto o consulta..."
               disabled={status === 'loading'}
             />
           </div>
+          {fieldErrors.message && (
+            <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+              <AlertCircle className="h-4 w-4" />
+              {fieldErrors.message}
+            </p>
+          )}
         </div>
 
         {status === 'success' && (
