@@ -53,8 +53,8 @@ export default function Navbar() {
         {/* MENÚ MÓVIL */}
         {mobileMenuOpen && (
           <div className="md:hidden py-4 space-y-3">
-            <a href="/" className="block text-slate-700 hover:text-cyan-600 py-2">Home</a>
-            <a href="/about" className="block text-slate-700 hover:text-cyan-600 py-2">About</a>
+            <a href="/" className="block text-slate-700 hover:text-cyan-600 py-2">Inicio</a>
+            <a href="/about" className="block text-slate-700 hover:text-cyan-600 py-2">Nosotros</a>
             <a href="/proyectos" className="block text-slate-700 hover:text-cyan-600 py-2">Proyectos</a>
             <a href="/blog" className="block text-slate-700 hover:text-cyan-600 py-2">Blog</a>
             <a href="/contacto" className="block px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg text-center">
