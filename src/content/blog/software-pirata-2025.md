@@ -20,7 +20,7 @@ La realidad aparece después… y golpea más fuerte de lo que muchos imaginan.
 
 
 
-# 🚨 Una empresa perdió un mes de trabajo por usar Office pirata
+# Una empresa perdió un mes de trabajo por usar Office pirata
 
 Hace un tiempo asesoré a una pyme que trabajaba con una versión “alternativa” de Office.  
 Todo iba bien… hasta que un día, un archivo crítico simplemente **no abrió más**.
@@ -39,7 +39,7 @@ Aún hoy muchas pymes siguen operando con software pirata sin dimensionar el ver
 
 
 
-# 🔎 ¿Por qué se piratea tanto software de oficina?
+# ¿Por qué se piratea tanto software de oficina?
 
 Programas como Microsoft Office, suites de diseño, CAD, contabilidad o ERP suelen ser los más pirateados porque:
 
@@ -52,9 +52,9 @@ Pero sí pasa. Y mucho.
 
 
 
-# ⚠️ Riesgos reales de usar software pirata
+# Riesgos reales de usar software pirata
 
-## 🐞 1. Seguridad comprometida
+## 1. Seguridad comprometida
 
 Según estudios globales, un porcentaje significativo del software sin licencia incluye:
 
@@ -69,7 +69,7 @@ Usar software pirata es abrirle la puerta a vulnerabilidades graves.
 
 
 
-## 📂 2. Fallas, incompatibilidades y corrupción de archivos
+## 2. Fallas, incompatibilidades y corrupción de archivos
 
 El software pirata:
 
@@ -83,7 +83,7 @@ Como en el caso real que mencioné: un archivo dañado puede detener un proyecto
 
 
 
-## 📉 3. Impacto en credibilidad y contratos
+## 3. Impacto en credibilidad y contratos
 
 Muchas empresas y mandantes exigen:
 
@@ -100,7 +100,7 @@ Si una pyme usa software ilegal:
 
 
 
-## 💵 4. Riesgos legales y costos ocultos
+## 4. Riesgos legales y costos ocultos
 
 En Chile, estudios históricos mostraron cifras preocupantes:
 
@@ -113,7 +113,7 @@ Y aunque esa cifra ha mejorado con el tiempo, lo cierto es que muchas pymes sigu
 
 
 
-# 💡 El ahorro real está en la legalidad
+# El ahorro real está en la legalidad
 
 La pregunta correcta no es:
 
@@ -136,7 +136,7 @@ Pero sí hay empresas que han perdido clientes y proyectos por usar software ile
 
 
 
-# 📚 Fuentes consultadas
+# Fuentes consultadas
 
 > Todas las fuentes mencionadas son reales, públicas y verificables.
 
@@ -148,7 +148,7 @@ Pero sí hay empresas que han perdido clientes y proyectos por usar software ile
 
 
 
-# 🎯 Reflexión final
+# Reflexión final
 
 La tecnología no es solo una herramienta.  
 Es continuidad operativa, seguridad y credibilidad.
